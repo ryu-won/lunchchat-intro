@@ -521,7 +521,7 @@ export default function IntroPage() {
         <div className="h-32"></div>
       </motion.div>
       {/* Fixed Floating Button - goLunchchat.svg */}
-      <div className="fixed bottom-4 md:bottom-6 left-0 right-0 z-50">
+      <div className="fixed bottom-4 left-0 right-0 z-50">
         <div className="max-w-[440px] mx-auto px-5">
           <motion.button
             onClick={handleGoToMain}
