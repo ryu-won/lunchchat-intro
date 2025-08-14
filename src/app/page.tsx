@@ -1,15 +1,10 @@
 "use client";
 
-import { useRouter } from "next/navigation";
 import Image from "next/image";
-import { motion, useScroll, useTransform } from "framer-motion";
-import { useInView } from "react-intersection-observer";
+import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
-import Link from "next/link";
 
 export default function IntroPage() {
-  const router = useRouter();
-  const { scrollYProgress } = useScroll();
   const [buttonTextIndex, setButtonTextIndex] = useState(0);
 
   const buttonTexts = ["런치챗 보내기", "수락 대기중", "채팅 보내기"];
@@ -20,6 +15,10 @@ export default function IntroPage() {
     }, 700);
     return () => clearInterval(interval);
   }, [buttonTexts.length]);
+
+  const handleGoToMain = () => {
+    window.open("https://lunchchat.vercel.app/onboarding", "_blank");
+  };
 
   return (
     <div
@@ -523,33 +522,29 @@ export default function IntroPage() {
         <div className="h-32"></div>
       </motion.div>
       {/* Fixed Floating Button - goLunchchat.svg */}
-      <div className="fixed bottom-4 left-0 right-0 z-50">
+      <div className="fixed bottom-4 md:bottom-6 left-0 right-0 z-50">
         <div className="max-w-[440px] mx-auto px-5">
-          <Link
-            href="https://lunchchat.vercel.app/onboarding"
+          <motion.button
+            onClick={handleGoToMain}
             className="w-full flex justify-center"
+            animate={{
+              y: [0, -10, 0],
+            }}
+            transition={{
+              duration: 2,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
           >
-            <motion.div
-              className="w-full flex justify-center"
-              animate={{
-                y: [0, -10, 0],
-              }}
-              transition={{
-                duration: 2,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
-            >
-              <Image
-                src="/goLunchchat.svg"
-                alt="Go to LunchChat"
-                width={200}
-                height={80}
-                className="w-auto h-16 md:h-20"
-                priority
-              />
-            </motion.div>
-          </Link>
+            <Image
+              src="/goLunchchat.svg"
+              alt="Go to LunchChat"
+              width={200}
+              height={80}
+              className="w-auto h-16 md:h-20"
+              priority
+            />
+          </motion.button>
         </div>
       </div>
     </div>
