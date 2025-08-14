@@ -540,7 +540,7 @@ export default function IntroPage() {
               alt="Go to LunchChat"
               width={200}
               height={80}
-              className="w-auto h-16 md:h-20"
+              className="w-auto h-20"
               priority
             />
           </motion.button>
