@@ -1,14 +1,38 @@
 "use client";
 
-import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 
-export default function IntroPage() {
+interface ButtonTexts {
+  readonly texts: readonly ["런치챗 보내기", "수락 대기중", "채팅 보내기"];
+}
+
+interface ImageProps {
+  src: string;
+  alt: string;
+  width: number;
+  height: number;
+  className: string;
+  priority?: boolean;
+}
+
+interface AnimationProps {
+  initial: { opacity: number; y: number };
+  whileInView: { opacity: number; y: number };
+  viewport: { once: boolean; margin: string };
+  transition: { duration: number; ease: string };
+}
+
+interface FloatingAnimationProps {
+  animate: { y: number[] };
+  transition: { duration: number; repeat: string; ease: string };
+}
+
+export default function IntroPage(): JSX.Element {
   const [buttonTextIndex, setButtonTextIndex] = useState<number>(0);
 
-  const buttonTexts: readonly string[] = [
+  const buttonTexts: ButtonTexts["texts"] = [
     "런치챗 보내기",
     "수락 대기중",
     "채팅 보내기",
