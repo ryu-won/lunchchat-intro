@@ -1,26 +1,24 @@
 # LunchChat 인트로 페이지
 
-React와 TypeScript로 제작된 LunchChat 서비스의 인트로 페이지입니다.
+Next.js와 TypeScript로 제작된 LunchChat 서비스의 인트로 페이지입니다.
 
 ## 🚀 기능
 
 - **반응형 디자인**: 모바일과 데스크톱 모두 지원
-- **이미지 지원**: SVG 이미지들의 정밀한 배치와 겹침 효과
-- **애니메이션**: Framer Motion을 활용한 부드러운 스크롤 애니메이션
-- **동적 UI**: 상태에 따라 변화하는 버튼 텍스트와 색상
-- **Fixed 버튼**: 하단에 고정된 메인 서비스 이동 버튼
+- **이미지 지원**: 실제 이미지와 fallback 아이콘 모두 지원
+- **Fixed 버튼**: 우측 하단에 고정된 메인 서비스 이동 버튼
 - **모던 UI**: Tailwind CSS를 활용한 현대적인 디자인
 
 ## 🛠️ 기술 스택
 
-- **React 18** - 사용자 인터페이스 구축을 위한 JavaScript 라이브러리
+- **Next.js 14** - React 기반 풀스택 프레임워크
 - **TypeScript** - 타입 안전성
 - **Tailwind CSS** - 유틸리티 우선 CSS 프레임워크
-- **Framer Motion** - 애니메이션 라이브러리
+- **App Router** - Next.js 13+ App Router 사용
 
 ## 📁 프로젝트 구조
 
-```bash
+```
 lunchchat-intro/
 ├── src/
 │   ├── app/

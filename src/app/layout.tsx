@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "LunchChat - 교내 커피챗 플랫폼",
+  title: "LunchChat - 대학생 커피챗 플랫폼",
   description:
     "Lunch with Insight!  매일 가는 학교, 매일 먹는 점심. 런치챗과 함께라면 점심시간이 더 가치 있는 시간이 됩니다.",
   keywords: ["커피챗", "대학생", "네트워킹", "런치챗", "LunchChat"],
