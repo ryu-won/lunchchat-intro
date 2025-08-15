@@ -19,7 +19,7 @@ export default function IntroPage() {
   }, [buttonTexts.length]);
 
   const handleGoToMain = (): void => {
-    window.open("https://lunchchat.site/", "_blank");
+    window.open("https://lunchchat.vercel.app/", "_blank");
   };
 
   return (
