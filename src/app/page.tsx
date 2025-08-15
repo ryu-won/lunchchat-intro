@@ -359,7 +359,7 @@ export default function IntroPage() {
 
           {/* 런치챗 보내기 버튼 */}
           <motion.div
-            className="absolute left-1/2 transform -translate-x-1/2 bottom-74 md:bottom-82"
+            className="absolute left-1/2 transform -translate-x-1/2 bottom-73 md:bottom-82"
             style={{
               width: "143.65px",
               height: "22.016px",
